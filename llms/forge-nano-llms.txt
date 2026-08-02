@@ -1,0 +1,45 @@
+# Forge Nano
+
+> Forge Nano is a materials-technology manufacturer headquartered in Thornton, Colorado that commercializes particle and wafer Atomic Layer Deposition (ALD) under its Atomic Armor platform and patented ALDx architecture. It coats powders, electrodes and semiconductor wafers at atomic scale to improve energy density, cycle life, thermal stability and yield, selling US-sourced lithium-ion cells from its Morrisville, North Carolina gigafactory, commercial semiconductor wafer-fabrication equipment (including the TEPHRA 200mm cluster tool), and Powder ALD coating systems.
+
+Forge Nano is a hardware and advanced-materials company, not an API provider. As of 2026-08-01 it publishes **no public API, no developer portal, no SDK and no machine-readable API contract** (no OpenAPI, GraphQL, AsyncAPI, MCP server or A2A agent card). See `x-contract-discovery.yml` in this repository for the full record of the discovery probes.
+
+## Company
+
+- [Forge Nano](https://www.forgenano.com/): Corporate website.
+- [About Forge Nano](https://www.forgenano.com/about-us/): Company background, leadership and locations.
+- [Atomic Armor](https://www.forgenano.com/atomic-armor/): The core ALD nanocoating platform.
+- [Industries](https://www.forgenano.com/industries/): Markets served.
+- [Careers](https://www.forgenano.com/careers/): Open roles.
+- [Investor Relations](https://ir.forgenano.com/): Investor information.
+
+## Products
+
+- [Semiconductors](https://www.forgenano.com/semiconductors/): Wafer-fabrication ALD equipment, including the TEPHRA 200mm cluster tool.
+- [Energy Storage](https://www.forgenano.com/energy-storage/): Coated cathode/anode materials and cell technology.
+- [Batteries](https://www.forgenano.com/batteries/): Lithium-ion cell products.
+- [Gigafactory](https://www.forgenano.com/gigafactory/): US-sourced cell manufacturing in Morrisville, North Carolina.
+- [Powder ALD Systems](https://www.forgenano.com/powder-ald-systems/): Particle coating equipment for batteries, catalysts and composites.
+- [Defense and Aerospace](https://www.forgenano.com/defense-and-aerospace/): Defense and aerospace applications.
+
+## News
+
+- [Press Releases](https://www.forgenano.com/category/press-release/): Company announcements.
+- [Press Release RSS](https://www.forgenano.com/category/press-release/feed/): RSS feed of announcements.
+
+## Resources
+
+- [Downloads](https://www.forgenano.com/downloads/): Technical literature and datasheets.
+- [Quality Policy](https://www.forgenano.com/quality-policy/): Quality management statement.
+
+## Legal
+
+- [Terms of Use](https://www.forgenano.com/terms-of-use/)
+- [Privacy Policy](https://www.forgenano.com/privacy-policy/)
+- [Cookie Policy](https://www.forgenano.com/cookie-policy/)
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/company/forgenano/)
+- [YouTube](https://www.youtube.com/channel/UC6tmrBjJw8l7IyR_ghWOlFw)
+- [Forge Global secondary-market listing](https://forgeglobal.com/forge-nano_stock/)

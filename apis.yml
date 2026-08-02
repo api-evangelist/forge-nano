@@ -1,17 +1,36 @@
 aid: forge-nano
 name: Forge Nano
-description: 'Forge Nano is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Forge Nano is a materials-technology manufacturer headquartered in Thornton,
+  Colorado that commercializes particle and wafer Atomic Layer Deposition (ALD) under
+  its Atomic Armor platform and patented ALDx architecture. The company applies atomic-scale
+  nanocoatings to powders, electrodes and semiconductor wafers to improve energy density,
+  cycle life, thermal stability and yield, and sells three lines of business: US-sourced
+  lithium-ion cells from its Morrisville, North Carolina gigafactory, commercial semiconductor
+  wafer-fabrication equipment including the TEPHRA cluster tool for 200mm wafers, and
+  Powder ALD coating systems for batteries, catalysts and composites. Its markets are
+  semiconductors, energy storage, defense and aerospace, AI hardware and quantum devices.
+  Forge Nano is a hardware and advanced-materials company: as of this profiling pass
+  it publishes no public developer portal, API, SDK or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/forge-nano/refs/heads/main/apis.yml
+image: https://www.forgenano.com/wp-content/uploads/2025/09/logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
+x-tier: profiled
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Advanced Materials
+- Nanotechnology
+- Atomic Layer Deposition
+- Semiconductors
+- Energy Storage
+- Batteries
+- Manufacturing
+- Defense and Aerospace
+- Hardware
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,40 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/forge-nano-domain-security.yml
+- type: LLMsTxt
+  url: llms/forge-nano-llms.txt
 - type: Website
+  url: https://www.forgenano.com/
+- type: SecondaryMarket
   url: https://forgeglobal.com/forge-nano_stock/
+- type: About
+  url: https://www.forgenano.com/about-us/
+- type: Blog
+  url: https://www.forgenano.com/category/press-release/
+- type: BlogRSS
+  url: https://www.forgenano.com/category/press-release/feed/
+- type: Downloads
+  url: https://www.forgenano.com/downloads/
+- type: Careers
+  url: https://www.forgenano.com/careers/
+- type: InvestorRelations
+  url: https://ir.forgenano.com/
+- type: TermsOfService
+  url: https://www.forgenano.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.forgenano.com/privacy-policy/
+- type: CookiePolicy
+  url: https://www.forgenano.com/cookie-policy/
+- type: QualityPolicy
+  url: https://www.forgenano.com/quality-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/forgenano/
+- type: YouTube
+  url: https://www.youtube.com/channel/UC6tmrBjJw8l7IyR_ghWOlFw
+x-enrichment:
+  date: '2026-08-01'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1

@@ -1,0 +1,59 @@
+generated: '2026-08-01'
+method: probed
+source: live GET of /.well-known/* on every Forge Nano host in apis.yml
+summary:
+  documents_found: 0
+  note: >-
+    Forge Nano publishes no /.well-known/ discovery surface. Every canonical path
+    404s on the corporate WordPress host. The investor-relations host
+    ir.forgenano.com answers HTTP 200 with a text/html body reading "Invalid key"
+    for EVERY /.well-known/* path — a catch-all false positive, not a real
+    document — so nothing from that host was accepted or saved. No WellKnown,
+    SecurityTxt, APICatalog or AgentCard pointer is wired, because no document
+    exists.
+hosts:
+- host: www.forgenano.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: ir.forgenano.com
+  note: catch-all host — every path returns 200 text/html "Invalid key"; all rejected
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    accepted: false
+    reason: body is text/html "Invalid key", not RFC 9116 text/plain
+  - path: /.well-known/agent-card.json
+    status: 200
+    accepted: false
+    reason: body is text/html "Invalid key", not a JSON AgentCard object
+  - path: /.well-known/agent.json
+    status: 200
+    accepted: false
+    reason: body is text/html "Invalid key", not a JSON AgentCard object
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    accepted: false
+    reason: body is text/html "Invalid key", not JSON
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301

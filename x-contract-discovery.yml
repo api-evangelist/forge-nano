@@ -1,0 +1,69 @@
+generated: '2026-08-01'
+method: probed
+source: API Evangelist enrichment pipeline, STEP 0b contract discovery
+result: no-machine-readable-contract
+summary: >-
+  Forge Nano is an advanced-materials and capital-equipment manufacturer (particle
+  and wafer Atomic Layer Deposition, lithium-ion cell manufacturing). It ships no
+  public API product, no developer portal, no SDK and no machine-readable contract.
+  This file records the full STEP 0b hunt so a later round does not repeat it.
+hosts_probed:
+- host: www.forgenano.com
+  reachable: true
+  note: WordPress marketing site (Yoast sitemaps, Gravity Forms)
+- host: forgenano.com
+  reachable: true
+  note: redirects to www
+- host: www2.forgenano.com
+  reachable: true
+  note: redirects to www
+- host: ir.forgenano.com
+  reachable: true
+  note: hosted investor-relations platform; catch-all 200 text/html "Invalid key" on unknown paths
+- host: api.forgenano.com
+  reachable: false
+  note: does not resolve
+- host: docs.forgenano.com
+  reachable: false
+  note: does not resolve
+- host: developer.forgenano.com
+  reachable: false
+  note: does not resolve
+- host: pay.forgenano.com
+  reachable: true
+  note: third-party hosted pay-link vendor page ("Pay Link Not Found"), not a Forge Nano API
+- host: track.forgenano.com
+  reachable: true
+  note: 404; marketing link-tracking CNAME
+- host: xdr.forgenano.com
+  reachable: false
+- host: playsite.forgenano.com
+  reachable: false
+subdomain_source: certificate transparency (crt.sh) enumeration of %.forgenano.com
+probes:
+  rest_openapi:
+    paths: [/openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs, /redoc]
+    result: none
+    note: every path 404/403/301 on every reachable host; no body parsed as OpenAPI or Swagger
+  graphql:
+    paths: [/graphql]
+    result: none
+    note: 404 on www, 301 to marketing page on ir
+  mcp_tools_list:
+    result: none
+    note: no hosted or documented MCP server found for Forge Nano
+  a2a_agent_card:
+    paths: [/.well-known/agent-card.json, /.well-known/agent.json]
+    result: none
+    note: >-
+      404 on www.forgenano.com. ir.forgenano.com returns 200 for both paths but the
+      body is text/html "Invalid key" (a catch-all), which fails the AgentCard shape
+      test, so it was rejected. Nothing written to a2a/ — an agent card is never
+      generated or derived.
+  registries:
+    checked: [npm, PyPI, GitHub organizations, web search]
+    result: none
+    note: >-
+      Package/registry and web searches for "Forge Nano" SDK/API return only
+      unrelated Autodesk Forge, Laravel Forge and getforge.com results. No
+      first-party Forge Nano client library or GitHub organization exists.
