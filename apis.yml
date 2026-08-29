@@ -12,6 +12,17 @@ description: 'Forge Nano is a materials-technology manufacturer headquartered in
   Forge Nano is a hardware and advanced-materials company: as of this profiling pass
   it publishes no public developer portal, API, SDK or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/forge-nano/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.forgenano.com/wp-content/uploads/2025/09/logo.svg
 x-type: company
 x-source: harvest:secondary-market
